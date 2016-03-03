@@ -1,0 +1,66 @@
+@model Essentialex.ViewModels.Law.LawViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>LawViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Body)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Body)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Created)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Created)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DigitalVersionDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DigitalVersionDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Kind)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Kind)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LawDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LawDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LawName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LawName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Publication)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Publication)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Valid)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Valid)
+        </dd>
+    </dl>
+</div>
+<p>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</p>
