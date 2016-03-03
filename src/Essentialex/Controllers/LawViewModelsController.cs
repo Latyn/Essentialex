@@ -21,7 +21,17 @@ namespace Essentialex.Controllers
         // GET: LawViewModels
         public IActionResult Index()
         {
+
             return View(_context.LawViewModel.ToList().OrderBy(m => m.LawName));
+
+        }
+        [HttpPost]
+        public IActionResult Index(int page, int take)
+        {
+            var skip = page * 10;
+            take = 10;
+            return View(_context.LawViewModel.Skip(skip).Take(take).ToList().OrderBy(m => m.LawName));
+
         }
 
         // GET: LawViewModels/Details/5
