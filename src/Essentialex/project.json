@@ -36,7 +36,11 @@
   },
 
   "frameworks": {
-    "dnx451": { },
+    "dnx451": {
+      "dependencies": {
+        "SimplePagination": "1.2.5"
+      }
+    },
     "dnxcore50": { }
   },
 

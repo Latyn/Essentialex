@@ -1911,6 +1911,15 @@
           "lib/net45/Remotion.Linq.dll": {}
         }
       },
+      "SimplePagination/1.2.5": {
+        "type": "package",
+        "compile": {
+          "lib/SimplePagination.dll": {}
+        },
+        "runtime": {
+          "lib/SimplePagination.dll": {}
+        }
+      },
       "System.Collections/4.0.0": {
         "type": "package",
         "compile": {
@@ -6901,6 +6910,15 @@
           "lib/net45/Remotion.Linq.dll": {}
         }
       },
+      "SimplePagination/1.2.5": {
+        "type": "package",
+        "compile": {
+          "lib/SimplePagination.dll": {}
+        },
+        "runtime": {
+          "lib/SimplePagination.dll": {}
+        }
+      },
       "System.Collections/4.0.0": {
         "type": "package",
         "compile": {
@@ -9023,6 +9041,15 @@
         },
         "runtime": {
           "lib/net45/Remotion.Linq.dll": {}
+        }
+      },
+      "SimplePagination/1.2.5": {
+        "type": "package",
+        "compile": {
+          "lib/SimplePagination.dll": {}
+        },
+        "runtime": {
+          "lib/SimplePagination.dll": {}
         }
       },
       "System.Collections/4.0.0": {
@@ -17889,6 +17916,16 @@
         "runtimes/win7-x86/native/sni.dll"
       ]
     },
+    "SimplePagination/1.2.5": {
+      "type": "package",
+      "sha512": "hFoLDSs3nDYxIqLG5ciuFH8jzroXRe+cQvFCUHUAs40y3KFXLf6fxnzUHZFIOZleKKhzDU/V+GDJk0km8t6qvA==",
+      "files": [
+        "lib/SimplePagination.dll",
+        "SimplePagination.1.2.5.nupkg",
+        "SimplePagination.1.2.5.nupkg.sha512",
+        "SimplePagination.nuspec"
+      ]
+    },
     "System.AppContext/4.0.0": {
       "type": "package",
       "serviceable": true,
@@ -21879,7 +21916,9 @@
       "Microsoft.VisualStudio.Web.BrowserLink.Loader >= 14.0.0-rc1-final",
       "AutoMapper >= 4.1.1"
     ],
-    "DNX,Version=v4.5.1": [],
+    "DNX,Version=v4.5.1": [
+      "SimplePagination >= 1.2.5"
+    ],
     "DNXCore,Version=v5.0": []
   }
 }
