@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color:#535756;
 }
 
 /* Wrapping element */
@@ -8,6 +9,7 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    border-color:#535756;
 }
 
 /* Set widths on the form inputs since otherwise they're 100% wide */
@@ -17,14 +19,20 @@ textarea {
     max-width: 280px;
 }
 
+.backcolor{
+    background-color:#dcd4d4;
+}
+.togglebackcolor{
+    background-color:#535756;
+}
 /* Carousel */
 .carousel-caption {
     z-index: 10 !important;
 }
 
     .carousel-caption p {
-        font-size: 20px;
-        line-height: 1.4;
+        font-size: 30px;
+        line-height: 1.6;
     }
 
 @media (min-width: 768px) {

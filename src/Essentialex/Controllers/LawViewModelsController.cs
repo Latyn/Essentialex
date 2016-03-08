@@ -7,6 +7,8 @@ using Essentialex.ViewModels.Law;
 using AutoMapper;
 using System.Collections.Generic;
 
+
+
 namespace Essentialex.Controllers
 {
     public class LawViewModelsController : Controller
@@ -18,22 +20,61 @@ namespace Essentialex.Controllers
             _context = context;    
         }
 
-        // GET: LawViewModels
-        public IActionResult Index()
+        [ActionName("Index")]
+        public IActionResult Index(int? page, int? take)
         {
+            int skip;
 
-            return View(_context.LawViewModel.ToList().OrderBy(m => m.LawName));
-
+            if (page == null)
+            {
+                return View();
+            }
+            else{
+                skip =  (int) page * 10;
+                take = 10;
+                return View(_context.LawViewModel.Skip(skip).Take((int)take).ToList().OrderBy(m => m.LawName));
+            }
         }
-        [HttpPost]
-        public IActionResult Index(int page, int take)
+        public IActionResult Search(int? page, int? take)
         {
-            var skip = page * 10;
-            take = 10;
-            return View(_context.LawViewModel.Skip(skip).Take(take).ToList().OrderBy(m => m.LawName));
+            int skip;
 
+            if (page == null)
+            {
+                return View();
+            }
+            else {
+                skip = (int)page * 10;
+                take = 10;
+                return View(_context.LawViewModel.Skip(skip).Take((int)take).ToList().OrderBy(m => m.LawName));
+            }
         }
 
+        [HttpGet]
+        public JsonResult SearchJson(int? page, int? take)
+        {
+            int skip;
+
+            if (page == null)
+            {
+                return null;
+            }
+            else {
+
+                JsonLaw LawObject = new JsonLaw();
+                List<LawViewModel> model = new List<LawViewModel>();
+
+                skip = (int)page * 10;
+                take = 10;
+
+                model = Mapper.Map <List<Law>,List<LawViewModel>>( _context.LawViewModel.Skip(skip).Take((int)take).OrderBy(m => m.LawName).ToList());
+
+                LawObject.records = model;
+                LawObject.hits = _context.LawViewModel.Count();
+
+                return Json(LawObject);
+            }
+        }
         // GET: LawViewModels/Details/5
         public IActionResult Details(int? id)
         {
@@ -136,4 +177,10 @@ namespace Essentialex.Controllers
             return RedirectToAction("Index");
         }
     }
+
+}
+public class JsonLaw
+{
+    public List<LawViewModel> records;
+    public int hits;
 }
