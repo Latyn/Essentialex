@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color:#535756;
+    background-color:#faf3f3;
 }
 
 /* Wrapping element */
@@ -49,4 +49,12 @@ textarea {
 
 .panelList :hover{
     background-color : #dcd4d4;
+}
+pre {
+    text-align: center;
+    white-space: pre-line;
+}
+
+.paginator{
+    padding-left : 15%;
 }

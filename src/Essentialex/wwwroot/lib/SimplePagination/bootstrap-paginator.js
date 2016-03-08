@@ -569,7 +569,7 @@
 
     $.fn.bootstrapPaginator.defaults = {
         //div class 
-        containerClass: "NoMargin",
+        containerClass: "paginator",
         size: "normal",
         alignment: "left",
         bootstrapMajorVersion: 2,
