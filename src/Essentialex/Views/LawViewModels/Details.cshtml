@@ -3,64 +3,85 @@
 @{
     ViewData["Title"] = "Details";
 }
-
-<h2>Details</h2>
-
 <div>
-    <h4>LawViewModel</h4>
+    <h2>@Html.DisplayFor(model => model.Publication)</h2>
+    <h4>@Html.DisplayFor(model => model.Kind)</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Body)
-        </dt>
-        <dd>
+    <div class="row">
+        <div class="col-md-12 col-xs-12">
+            <div class="row nopadding">
+                <div class="bs-callout bs-callout-info">
+                    <h4>Law Details</h4>
+                    <div class="toppadding">
+                        <div class="row">
+                            <div class="col-lg-2">
+                                <span class="spanList">@Html.DisplayNameFor(model => model.Created) : </span>
+                            </div>
+                            <div class="col-lg-10">
+                                @Html.DisplayFor(model => model.Created)
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2">
+                                <span class="spanList">@Html.DisplayNameFor(model => model.DigitalVersionDate) : </span>
+                            </div>
+                            <div class="col-lg-10">
+                                @Html.DisplayFor(model => model.DigitalVersionDate)
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2">
+                                <span class="spanList">@Html.DisplayNameFor(model => model.Kind) : </span>
+                            </div>
+                            <div class="col-lg-10">
+                                @Html.DisplayFor(model => model.Kind)
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2">
+                                <span class="spanList">@Html.DisplayNameFor(model => model.LawDate) : </span>
+                            </div>
+                            <div class="col-lg-10">
+                                @Html.DisplayFor(model => model.LawDate)
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2">
+                                <span class="spanList">@Html.DisplayNameFor(model => model.LawName) : </span>
+                            </div>
+                            <div class="col-lg-10">
+                                @Html.DisplayFor(model => model.LawName)
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2">
+                                <span class="spanList">@Html.DisplayNameFor(model => model.Publication) : </span>
+                            </div>
+                            <div class="col-lg-10">
+                                @Html.DisplayFor(model => model.Publication)
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2">
+                                <span class="spanList">@Html.DisplayNameFor(model => model.Valid) : </span>
+                            </div>
+                            <div class="col-lg-10">
+                                @Html.DisplayFor(model => model.Valid)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
             <pre>@Html.Raw(Model.Body)</pre>
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Created)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Created)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.DigitalVersionDate)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.DigitalVersionDate)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Kind)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Kind)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.LawDate)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.LawDate)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.LawName)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.LawName)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Publication)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Publication)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Valid)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Valid)
-        </dd>
-    </dl>
+        </div>
+    </div>
+ 
 </div>
 <p>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    @*<a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |*@
     <a asp-action="Index">Back to List</a>
 </p>
